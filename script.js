@@ -46,10 +46,12 @@ function addTask() {
     ])
   );
   const li = document.createElement("li");
-  li.innerHTML = `<li>
+  li.innerHTML = ` 
+  <li>
     <input type="checkbox" id="check" onclick="taskComplete(this)" class="check">
       <input type="text" value="${task.value}" class="task form-control" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-      <i class="fa-solid fa-square-xmark" onclick="removeTask(this)"></i></li>`;
+      <i class="fa-solid fa-square-xmark" onclick="removeTask(this)"></i></li>
+      `;
   list.insertBefore(li, list.children[0]);
   task.value = "";
 }
